@@ -9,7 +9,7 @@ res.send("PI conf page running ...")
 
 var socketClient = ioClient.connect('https://relock.herokuapp.com/');
 socketClient.on('connect',function(){
-  server.emit('remote','connected successfully');
+  socketClient.emit('remote','connected successfully');
 });
 var port = process.env.PORT || 3001;
 server.listen(port);
