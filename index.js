@@ -7,8 +7,8 @@ app.get('/',function(req,res){
 res.send("PI conf page running ...")
 });
 
-var socketClient = ioClient.connect('https://relock.herokuapp.com/');
-socketClient.on("work",function(data){
+var socketClient = ioClient.connect('https://relock.herokuapp.com/',function(){
+server.on("work",function(data){
   console.log(data);
 });
 var port = process.env.PORT || 3001;
