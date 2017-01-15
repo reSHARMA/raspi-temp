@@ -1,0 +1,27 @@
+{
+"name": "raspi-temp",
+"version": "1.0.0",
+"description": "PI server",
+"engines": {
+"node": "5.9.1",
+"npm": "4.0.5"
+},
+"main": "index.js",
+"scripts": {
+"start": "node index.js"
+},
+"dependencies": {
+"socket.io": "^1.7.2",
+"express": "^4.14.0" ,
+"socket.io-client":*
+},
+"repository": {
+"type": "git",
+"url": "https://github.com/reSHARMA/raspi-temp"
+},
+"keywords": [
+"node",
+"express"
+],
+"license": "MIT"
+}
