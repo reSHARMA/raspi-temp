@@ -11,8 +11,8 @@ var socketClient = ioClient.connect('https://relock.herokuapp.com/');
 socketClient.on('connect',function(){
   socketClient.emit('remote','connected successfully');
 });
-socketClient.on('work',function(data){
-  console.log(data);
-});
+// socketClient.on('work',function(data){
+ // console.log(data);
+// });
 var port = process.env.PORT || 3001;
 server.listen(port);
