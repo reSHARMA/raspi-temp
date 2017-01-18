@@ -14,7 +14,7 @@ socketClient.on('connect',function(){
   console.log(data);
  });
 });
- socketClient.on('status',function(data){
+ socketClient.on('stat',function(data){
   console.log(data);
  });
 var port = process.env.PORT || 3001;
