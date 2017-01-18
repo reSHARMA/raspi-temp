@@ -14,6 +14,8 @@ socketClient.on('connect',function(){
   console.log(data);
  });
 });
-
+ socketClient.on('status',function(data){
+  console.log(data);
+ });
 var port = process.env.PORT || 3001;
 server.listen(port);
