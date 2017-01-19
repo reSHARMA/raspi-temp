@@ -29,7 +29,7 @@ function status(){
        stat=value;
        return stat;
      */
-       return 0;
+       return "unlock";
 }
 var socketClient = ioClient.connect('https://relock.herokuapp.com/', {reconnect: true});
 socketClient.on('connect',function(){
