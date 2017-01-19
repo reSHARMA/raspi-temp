@@ -36,8 +36,9 @@ socketClient.on('connect',function(){
    
    var interval = setInterval(function() {
  console.log("pi connected");
- socketClient.emit('remote','connected successfully'); 
-}, 5000);
+ socketClient.emit('remote','connected successfully');
+ socketClient.emit('stat',status());
+}, 10000);
   
 });
    socketClient.on('pi',function(data){
