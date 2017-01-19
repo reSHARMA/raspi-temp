@@ -33,11 +33,13 @@ function status(){
 }
 var socketClient = ioClient.connect('https://relock.herokuapp.com/', {reconnect: true});
 socketClient.on('connect',function(){
-   setInterval(temp(){socketClient.emit('remote','connected successfully'); } , 2000 );
-  socketClient.emit('status',status());
- });
-socketClient.on('pi',function(data){
-  if(data=="lock"){
+   var intervalID = window.setInterval(myCallback, 2500);
+   function myCallback() {
+   socketClient.emit('remote','connected successfully'); 
+   }
+  
+   socketClient.on('pi',function(data){
+   if(data=="lock"){
      console.log(data);
     /* gipo.setup(lockPin,gipo.DIR_OUT,function(){
         gpio.write(lockPin,true);
