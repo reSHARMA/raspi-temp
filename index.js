@@ -37,7 +37,7 @@ socketClient.on('connect',function(){
    function myCallback() {
    socketClient.emit('remote','connected successfully'); 
    }
-  
+});
    socketClient.on('pi',function(data){
    if(data=="lock"){
      console.log(data);
