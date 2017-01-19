@@ -7,15 +7,18 @@ app.get('/',function(req,res){
 res.send("PI conf page running ...")
 });
 
-var socketClient = ioClient.connect('https://relock.herokuapp.com/');
+var socketClient = ioClient.connect('https://relock.herokuapp.com/', {reconnect: true});
 socketClient.on('connect',function(){
   socketClient.emit('remote','connected successfully');
-   socketClient.on('status',function(data){
+   socketClient.on('stat',function(data){
   console.log(data);
  });
 });
- socketClient.on('stat',function(data){
+ 
+socketClient.on('stat',function(data){
   console.log(data);
  });
+
+
 var port = process.env.PORT || 3001;
 server.listen(port);
