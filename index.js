@@ -33,10 +33,10 @@ function status(){
 }
 var socketClient = ioClient.connect('https://relock.herokuapp.com/', {reconnect: true});
 socketClient.on('connect',function(){
-   var intervalID = window.setInterval(myCallback, 2500);
-   function myCallback() {
-   socketClient.emit('remote','connected successfully'); 
-   }
+   var interval = setInterval(function() {
+ socketClient.emit('remote','connected successfully'); 
+}, 1000);
+  
 });
    socketClient.on('pi',function(data){
    if(data=="lock"){
