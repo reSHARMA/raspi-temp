@@ -3,7 +3,7 @@ var express = require ('express');
 var app = express();
 var server = require ('http').createServer(app);
 var io = require('socket.io')(server);
-var status;
+var stat;
 /* var gipo = require ('rpi-gipo')    
    var lockPin = 7;
    var statusPin = 6;
@@ -26,8 +26,8 @@ function status(){
      /*gipo.setup(statusPin,gipo.DIR_IN,function(err,value){
        console.log(value);
        socketClient.emit('result',value);
-       status=value;
-       return status;
+       stat=value;
+       return stat;
      */
        return 0;
 }
