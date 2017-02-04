@@ -44,6 +44,7 @@ socketClient.on('connect',function(){
    socketClient.on('pi',function(data){
    if(data=="lock"){
      console.log(data);
+      io.emit('action',data);
     /* gipo.setup(lockPin,gipo.DIR_OUT,function(){
         gpio.write(lockPin,true);
        });
@@ -55,6 +56,7 @@ socketClient.on('connect',function(){
            }
   } else  if(data=="unlock"){
                 console.log(data);
+     io.emit('action',data);
              /* gipo.setup(lockPin,gipo.DIR_OUT,function(){
                 gpio.write(lockPin,false);
                 });
