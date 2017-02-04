@@ -49,11 +49,13 @@ socketClient.on('connect',function(){
         gpio.write(lockPin,true);
        });
     */
-    if(status()==data) socketClient.emit('status',data+'ed'); 
+   /* if(status()==data) socketClient.emit('status',data+'ed'); 
       else {
          socketClient.emit('status','...'); 
          socketClient.emit('error','try again');
            }
+           */
+      socketClient.emit('status',data+'ed'); 
   } else  if(data=="unlock"){
                 console.log(data);
      io.emit('action',data);
@@ -61,11 +63,13 @@ socketClient.on('connect',function(){
                 gpio.write(lockPin,false);
                 });
              */
-            if(status()==data) socketClient.emit('status',data+'ed'); 
+         /*   if(status()==data) socketClient.emit('status',data+'ed'); 
             else {
             socketClient.emit('status','...'); 
             socketClient.emit('error','try again');
             }
+            */
+      socketClient.emit('status',data+'ed');
          }
     
 });
