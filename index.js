@@ -70,11 +70,11 @@ socketClient.on('connect',function(){
             }
             */
       socketClient.emit('status',data+'ed');
-  }  else if(data=="ring") {
+  } 
+     socketClient.on('ring',function(data){
      console.log(data);
     socketClient.emit('ring',data);
-     }
-         
+     }     
     
 });
 var port = process.env.PORT || 3001;
