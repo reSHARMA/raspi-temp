@@ -70,7 +70,7 @@ socketClient.on('connect',function(){
             }
             */
       socketClient.emit('status',data+'ed');
-  } 
+  } }
      socketClient.on('ring',function(data){
      console.log(data);
     socketClient.emit('ring',data);
