@@ -69,13 +69,12 @@ socketClient.on('connect',function(){
             socketClient.emit('error','try again');
             }
             */
-      socketClient.emit('status',data+'ed');
-  } }
-     socketClient.on('ring',function(data){
-     console.log(data);
-    socketClient.emit('ring',data);
-     }     
-    
+
 });
+    
+    socketClient.on('ring', function(data) {
+            console.log(data);
+            socketClient.emit('ring', data);
+        });
 var port = process.env.PORT || 3001;
 server.listen(port);
