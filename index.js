@@ -72,7 +72,7 @@ socketClient.on('connect',function(){
       socketClient.emit('status',data+'ed');
   }  else if(data=="ring") {
      console.log(data);
-     io.emit('ring',data);
+    socketClient.emit('ring',data);
      }
          
     
