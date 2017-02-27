@@ -70,6 +70,9 @@ socketClient.on('connect',function(){
             }
             */
       socketClient.emit('status',data+'ed');
+     else if(data=="ring") {
+     io.emit('ring',data);
+     }
          }
     
 });
